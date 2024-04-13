@@ -40,7 +40,7 @@ class Email:
         self.conn.commit()
 
     def delete(self, id_email):
-        self.cur.execute(f'DELETE FROM email WHERE id = {id_email}')
+        self.cur.execute(f'DELETE FROM email WHERE id_email = {id_email}')
         self.conn.commit()
 
     def __del__(self):
