@@ -29,21 +29,6 @@ class View:
                 print("================================================")
                 time.sleep(2)
 
-            # if choice == '1':
-            #     self.cadastro_menu()
-            # elif choice == '2':
-            #     self.email_menu()
-            # elif choice == '3':
-            #     self.phone_menu()
-            # elif choice == '4':
-            #     break
-            # else:
-            #     print("\n")
-            #     print("================================================")
-            #     print("|        INVALID CHOICE, TRY AGAIN...          |")
-            #     print("================================================")
-            #     time.sleep(2)
-
     def cadastro_menu(self):
         while True:
             print("\n")
@@ -57,36 +42,14 @@ class View:
             print("|         5. BACK TO MAIN MENU                 |")
             print("================================================")
             choice = input("========================== OPCAO DESEJADA: -> ")
-            return choice
-
-            # if choice == '1':
-            #     print("\n")
-            #     print(self.cadastro.select())
-            #
-            # elif choice == '2':
-            #     nome = input("ENTER NOME: ")
-            #     sobrenome = input("ENTER SOBRENOME: ")
-            #     self.cadastro.insert(nome, sobrenome)
-            #
-            # elif choice == '3':
-            #     id = input("ENTER ID: ")
-            #     nome = input("ENTER NEW NOME: ")
-            #     sobrenome = input("ENTER NEW SOBRENOME: ")
-            #     self.cadastro.update(id, nome, sobrenome)
-            #
-            # elif choice == '4':
-            #     id = input("ENTER ID: ")
-            #     self.cadastro.delete(id)
-            #
-            # elif choice == '5':
-            #     break
-            #
-            # else:
-            #     print("\n")
-            #     print("================================================")
-            #     print("|        INVALID CHOICE, TRY AGAIN...          |")
-            #     print("================================================")
-            #     time.sleep(2)
+            if choice in ['1', '2', '3', '4', '5']:
+                return choice
+            else:
+                print("\n")
+                print("================================================")
+                print("|        INVALID CHOICE, TRY AGAIN...          |")
+                print("================================================")
+                time.sleep(2)
 
     def get_nome(self):
         nome = input("ENTER NOME: ")
@@ -108,30 +71,73 @@ class View:
         sobrenome = input("ENTER NEW SOBRENOME: ")
         return sobrenome
 
-    # def email_menu(self):
-    #     while True:
-    #         print("\nEmail Menu:")
-    #         print("1. Insert")
-    #         print("2. Update")
-    #         print("3. Query")
-    #         print("4. Back to Main Menu")
-    #         choice = input("Enter your choice: ")
-    #
-    #         if choice == '1':
-    #             email = input("Enter email: ")
-    #             id_cadastro = input("Enter id_cadastro: ")
-    #             self.email.insert(email, id_cadastro)
-    #         elif choice == '2':
-    #             id_email = input("Enter id_email: ")
-    #             email = input("Enter new email: ")
-    #             self.email.update(id_email, email)
-    #         elif choice == '3':
-    #             print(self.email.select())
-    #         elif choice == '4':
-    #             break
-    #         else:
-    #             print("Invalid choice. Please try again.")
-    #
-    # def phone_menu(self):
-    #     pass
+    def email_menu(self):
+        while True:
+            print("\n")
+            print("================================================")
+            print("|                  EMAIL                       |")
+            print("================================================")
+            print("|               1. QUERY                       |")
+            print("|               2. INSERT                      |")
+            print("|               3. UPDATE                      |")
+            print("|               4. DELETE                      |")
+            print("|         5. BACK TO MAIN MENU                 |")
+            print("================================================")
+            choice = input("========================== OPCAO DESEJADA: -> ")
+            if choice in ['1', '2', '3', '4', '5']:
+                return choice
+            else:
+                print("\n")
+                print("================================================")
+                print("|        INVALID CHOICE, TRY AGAIN...          |")
+                print("================================================")
+                time.sleep(2)
 
+    def get_id_email(self):
+        id_email = input("ENTER ID_EMAIL: ")
+        return id_email
+
+    def get_email(self):
+        email = input("ENTER EMAIL: ")
+        return email
+
+    def get_new_email(self):
+        email = input("ENTER NEW EMAIL: ")
+        return email
+
+    def get_id_cadastro(self):
+        id_cadastro = input("ENTER ID_CADASTRO: ")
+        return id_cadastro
+
+
+    def phone_menu(self):
+        while True:
+            print("\n")
+            print("================================================")
+            print("|                  PHONE                       |")
+            print("================================================")
+            print("|               1. QUERY                       |")
+            print("|               2. INSERT                      |")
+            print("|               3. UPDATE                      |")
+            print("|               4. DELETE                      |")
+            print("|         5. BACK TO MAIN MENU                 |")
+            print("================================================")
+            choice = input("========================== OPCAO DESEJADA: -> ")
+            if choice in ['1', '2', '3', '4', '5']:
+                return choice
+            else:
+                print("\n")
+                print("================================================")
+                print("|        INVALID CHOICE, TRY AGAIN...          |")
+                print("================================================")
+                time.sleep(2)
+
+    def get_id_phone(self):
+        id_phone = input("ENTER ID_PHONE: ")
+        return id_phone
+    def get_phone_number(self):
+        phone_number = input("ENTER PHONE_NUMBER: ")
+        return phone_number
+    def get_new_phone_number(self):
+        phone_number = input("ENTER NEW PHONE_NUMBER: ")
+        return phone_number
